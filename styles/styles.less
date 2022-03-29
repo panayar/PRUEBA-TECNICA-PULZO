@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@font-poppins : 'Poppins',
+sans-serif;
+@font-ibm : 'IBM Plex Sans Arabic',
+sans-serif;
+@pad : 15px;
+@fontcolor: white;
+@textversus : #022248;
+@versus-yellow: #FACE3F;
+@btn-yellow: #FCC307;
+@rush-blue: #022248;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: @font-poppins;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background-image: url('/assets/BG-DESKTOP.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 95% 0%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.nav-logo {
+    width: 100%;
+    height: 50px;
+    padding: @pad;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    img {
+        width: 350px;
+    }
+
+}
+
+
+.main-container {
+    display: flex;
+    width: 70%;
+    height: 380px;
+    padding: 25px;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: center;
+    // background-color: red;
+
+    .cont-title {
+        color: @fontcolor;
+        text-align: center;
+        align-items: center;
+        font-weight: 300;
+    }
+
+    .cont-tie {
+        align-items: center;
+        text-align: center;
+
+        h3 {
+            color: @fontcolor;
+        }
+    }
+
+    .winner-container {
+        margin-left: 5%;
+        display: inline-block;
+    }
+
+}
+
+.cont-teams {
+    position: relative;
+    z-index: 3;
+    width: 300px;
+    height: auto;
+    // background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 150px;
+        z-index: 1;
+        padding: 20px;
+    }
+
+
+    .cont-divider {
+        position: absolute;
+        width: 200px;
+        z-index: -1;
+        background-color: @versus-yellow;
+        color: @textversus;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+}
+
+
+.flag {
+    position: relative;
+}
+
+.flag input {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 30px;
+    cursor: pointer;
+
+    &::after {
+        content: ' ';
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        background-color: @fontcolor;
+        border-radius: 50%;
+    }
+}
+
+
+.flag input[type="checkbox"]:checked::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    background-image: url('/assets/check.png');
+    background-size: cover;
+    background-position: center center;
+    z-index: 4;
+}
+
+
+#chck-tie {
+    margin-left: 60px;
+    margin-top: 0px;
+    z-index: 4;
+}
+
+.cont-tie {
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+
+.cont-tooltips {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    .tool {
+        width: 80px;
+        height: 24px;
+        font-size: 16px;
+        border-radius: 20px;
+        background-color: @rush-blue;
+        color: @fontcolor;
+        text-align: center;
+        display: inline-block;
+        margin: 5px;
+        font-weight: 400;
+    }
+
+    .spc {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+}
+
+.calc-container {
+    text-align: center;
+}
+
+.cont-form {
+    width: 300px;
+    height: 250px;
+    background-color: @rush-blue;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    -webkit-box-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.92);
+    box-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.92);
+
+    .form-title {
+        display: flex;
+
+        h2 {
+            color: @fontcolor;
+        }
+    }
+
+}
+
+.btn-refresh {
+    width: 20px;
+    height: 20px;
+    font-style: none;
+    border: none;
+    align-self: center;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 15px;
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+.form-button {
+
+    button {
+        height: 40px;
+        width: 180px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        background-color: @btn-yellow;
+        border: none;
+        border-radius: 10px;
+        font-weight: bold;
+        color: @rush-blue;
+        cursor: pointer;
+    }
+
+}
+
+
+.bet-button {
+
+    button {
+        height: 40px;
+        width: 230px;
+        background-color: @btn-yellow;
+        font-weight: bold;
+        border-radius: 20px;
+        font-size: 18px;
+        border: none;
+        text-align: center;
+        color: @rush-blue ;
+        -webkit-box-shadow: 4px 4px 0px 1px @rush-blue;
+        box-shadow: 4px 4px 0px 1px @rush-blue;
+        margin-top: 15px;
+        cursor: pointer;
+
+    }
+
+}
+
+
+.form-input {
+    width: 80%;
+    height: 35px;
+    border-radius: 15px;
+    background-color: @fontcolor;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.form-input input {
+    width: 80%;
+    height: 25px;
+    position: relative;
+    border: 0;
+    outline: none;
+    padding-left: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.form-input input::placeholder {
+    text-align: center;
+    color: @textversus;
+    font-weight: 500;
+}
+
+
+
+
+.cont-cedrits {
+    position: relative;
+    padding: @pad + 25px;
+    display: flex;
+    align-items: center;
+
+    p {
+        display: flex;
+        text-align: center;
+        font-size: 14px;
+        color: @fontcolor;
+    }
+
+    img {
+        width: 100px;
+        height: 70px;
+        margin-left: 10px;
+
+    }
+}
+
+
+
+@media screen and (max-width: 924px) {
+
+    body {
+        overflow-y: scroll;
+    }
+
+    .main-container {
+        width: 100%;
+        height: auto;
+    }
+
+    body {
+        background-image: url(/assets/BG-MOBILE.jpg);
+    }
+
+
+}
+
+
+@media screen and (max-width: 682px) {
+
+
+    .main-container {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+
+}

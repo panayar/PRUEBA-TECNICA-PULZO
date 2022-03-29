@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="icon" href="/assets/iconRush.png">
+    <title>Rushbet | Calculadora Apuestas</title>
+</head>
+
+<body>
+
+
+    <div class="nav-logo">
+        <img src="/assets/logoRushbet.png" alt="logo_rushbet">
+    </div>
+
+
+    <div class="main-container">
+
+
+        <div class="winner-container">
+
+            <div class="cont-title">
+                <h2 class="winner-title">Elige al ganador</h2>
+            </div>
+
+            <div class="cont-teams">
+
+                <div class="flag">
+                    <input class="check" id="chck-teamOne" type="checkbox" />
+                    <img class="teamOne" src="" alt="Rival 1">
+                </div>
+
+                <div class="cont-divider">
+                    <h2 class="versus-divider">VS</h2>
+                </div>
+
+                <div class="flag">
+                    <input class="check" id="chck-teamTwo" type="checkbox" />
+                    <img class="teamTwo" src="" alt="Rival 2">
+                </div>
+
+
+
+            </div>
+
+            <div class="cont-tie flag">
+                <input class="check" id="chck-tie" type="checkbox" />
+                <h3>EMPATE</h3>
+            </div>
+
+
+            <div class="cont-tooltips">
+                <div class="tool">
+                    <p id="cuota_1">1.04</p>
+                </div>
+                <div class="tool spc">
+                    <p id="cuota_2">12</p>
+                </div>
+                <div class="tool">
+                    <p class="cuota_3">326</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="calc-container">
+            <div class="cont-form">
+                <form>
+                    <div class="form-title">
+                        <h2>Calcular apuesta</h2>
+                        <button id="btn-restart" class="btn-refresh">
+                            <img src="/assets/refresh.png" />
+                        </button>
+                    </div>
+                    <div class="form-input">
+                        <input id="input-quantity" type="number" placeholder="$__________" />
+                    </div>
+                    <div class="form-button">
+                        <button type="button" id="btn-calcular" onclick="makeBet()">CALCULAR</button>
+                    </div>
+                    <div class="form-input">
+                        <input id="input-result" class="italic" placeholder="GANAS" type="text">
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="bet-button">
+                <a id="btn-bet-now" href="" target="_blank"><button>APUESTA AHORA</button></a>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="cont-cedrits">
+        <p class="italic">Jugar sin control causa adicción * Jugar legal es apostar a la salud * El juego es
+            entretenimiento, juega con
+            moderación * Prohibida la venta a menores de edad</p>
+        <img src="/assets/coljuegosIcon.png" alt="coljuegos-icon">
+        <br>
+    </div>
+
+
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>

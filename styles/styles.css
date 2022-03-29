@@ -1,0 +1,286 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v19/pxiByp8kv8JHgFVrLDz8V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v19/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v19/pxiByp8kv8JHgFVrLGT9V1s.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  width: 100%;
+  height: auto;
+  background-image: url('/assets/BG-DESKTOP.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 95% 0%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.italic {
+  font-style: italic;
+}
+.nav-logo {
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.nav-logo img {
+  width: 350px;
+}
+.main-container {
+  display: flex;
+  width: 70%;
+  height: 380px;
+  padding: 25px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container .cont-title {
+  color: white;
+  text-align: center;
+  align-items: center;
+  font-weight: 300;
+}
+.main-container .cont-tie {
+  align-items: center;
+  text-align: center;
+}
+.main-container .cont-tie h3 {
+  color: white;
+}
+.main-container .winner-container {
+  margin-left: 5%;
+  display: inline-block;
+}
+.cont-teams {
+  position: relative;
+  z-index: 3;
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cont-teams img {
+  width: 150px;
+  z-index: 1;
+  padding: 20px;
+}
+.cont-teams .cont-divider {
+  position: absolute;
+  width: 200px;
+  z-index: -1;
+  background-color: #FACE3F;
+  color: #022248;
+  text-align: center;
+  font-size: 1.5em;
+}
+.flag {
+  position: relative;
+}
+.flag input {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.flag input::after {
+  content: ' ';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  background-color: white;
+  border-radius: 50%;
+}
+.flag input[type="checkbox"]:checked::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  background-image: url('/assets/check.png');
+  background-size: cover;
+  background-position: center center;
+  z-index: 4;
+}
+#chck-tie {
+  margin-left: 60px;
+  margin-top: 0px;
+  z-index: 4;
+}
+.cont-tie {
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+.cont-tooltips {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.cont-tooltips .tool {
+  width: 80px;
+  height: 24px;
+  font-size: 16px;
+  border-radius: 20px;
+  background-color: #022248;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  font-weight: 400;
+}
+.cont-tooltips .spc {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.calc-container {
+  text-align: center;
+}
+.cont-form {
+  width: 300px;
+  height: 250px;
+  background-color: #022248;
+  border-radius: 25px;
+  padding: 20px;
+  text-align: center;
+  -webkit-box-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.92);
+  box-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.92);
+}
+.cont-form .form-title {
+  display: flex;
+}
+.cont-form .form-title h2 {
+  color: white;
+}
+.btn-refresh {
+  width: 20px;
+  height: 20px;
+  font-style: none;
+  border: none;
+  align-self: center;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.btn-refresh img {
+  width: 20px;
+  height: 20px;
+}
+.form-button button {
+  height: 40px;
+  width: 180px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  background-color: #FCC307;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #022248;
+  cursor: pointer;
+}
+.bet-button button {
+  height: 40px;
+  width: 230px;
+  background-color: #FCC307;
+  font-weight: bold;
+  border-radius: 20px;
+  font-size: 18px;
+  border: none;
+  text-align: center;
+  color: #022248;
+  -webkit-box-shadow: 4px 4px 0px 1px #022248;
+  box-shadow: 4px 4px 0px 1px #022248;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.form-input {
+  width: 80%;
+  height: 35px;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.form-input input {
+  width: 80%;
+  height: 25px;
+  position: relative;
+  border: 0;
+  outline: none;
+  padding-left: 15px;
+  text-align: center;
+  font-size: 16px;
+}
+.form-input input::placeholder {
+  text-align: center;
+  color: #022248;
+  font-weight: 500;
+}
+.cont-cedrits {
+  position: relative;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+}
+.cont-cedrits p {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+.cont-cedrits img {
+  width: 100px;
+  height: 70px;
+  margin-left: 10px;
+}
+@media screen and (max-width: 924px) {
+  body {
+    overflow-y: scroll;
+  }
+  .main-container {
+    width: 100%;
+    height: auto;
+  }
+  body {
+    background-image: url(/assets/BG-MOBILE.jpg);
+  }
+}
+@media screen and (max-width: 682px) {
+  .main-container {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
